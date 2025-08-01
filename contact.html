@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>تواصل معنا - أسس الرسالة الأمنية</title>
+   <meta name="keywords" content="تواصل معنا، اتصل بنا، أسس الرسالة الأمنية">
+   <meta name="description" content="تواصل مع فريق أسس الرسالة الأمنية المتخصص للحصول على أفضل الحلول">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- Arabic Support CSS -->
+   <style>
+     body {
+       font-family: 'Cairo', sans-serif !important;
+       direction: rtl;
+       text-align: right;
+     }
+     
+     /* Professional Contact Page Styling */
+     .contact-hero {
+       background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%);
+       padding: 80px 0;
+       color: white;
+       text-align: center;
+       position: relative;
+       overflow: hidden;
+     }
+     
+     .contact-hero::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="1000,100 1000,0 0,100"/></svg>');
+       background-size: 100% 100%;
+     }
+     
+     .contact-hero h1 {
+       font-size: 48px;
+       font-weight: 700;
+       margin-bottom: 20px;
+       animation: fadeInUp 1s ease;
+     }
+     
+     .contact-hero p {
+       font-size: 18px;
+       opacity: 0.9;
+       animation: fadeInUp 1s ease 0.2s both;
+     }
+     
+     /* Professional Contact Info Cards */
+     .contact-info-section {
+       padding: 80px 0;
+       background: #f8f9fa;
+     }
+     
+     .contact-card {
+       background: white;
+       border-radius: 20px;
+       padding: 40px 30px;
+       margin: 20px 0;
+       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+       transition: all 0.3s ease;
+       border: 1px solid #e9ecef;
+       position: relative;
+       overflow: hidden;
+       animation: fadeInUp 0.8s ease;
+       cursor: pointer;
+       text-decoration: none;
+       color: inherit;
+       display: block;
+     }
+     
+     .contact-card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 20px 50px rgba(139, 39, 145, 0.15);
+       text-decoration: none;
+       color: inherit;
+     }
+     
+     .contact-card::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       height: 4px;
+       background: linear-gradient(90deg, #dc2626 0%, #1f2937 100%);
+       transform: scaleX(0);
+       transition: transform 0.3s ease;
+     }
+     
+     .contact-card:hover::before {
+       transform: scaleX(1);
+     }
+     
+     /* Non-clickable address card styling */
+     .contact-card.address-card {
+       cursor: default;
+     }
+     
+     .contact-card.address-card:hover {
+       transform: translateY(-5px);
+     }
+     
+     .contact-icon {
+       width: 80px;
+       height: 80px;
+       background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%);
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin: 0 auto 25px;
+       color: white;
+       font-size: 32px;
+       transition: all 0.3s ease;
+     }
+     
+     .contact-card:hover .contact-icon {
+       transform: scale(1.1) rotate(360deg);
+     }
+     
+     .contact-card h3 {
+       font-size: 24px;
+       font-weight: 700;
+       color: #333;
+       margin-bottom: 15px;
+       text-align: center;
+     }
+     
+     .contact-card p {
+       font-size: 16px;
+       color: #666;
+       text-align: center;
+       line-height: 1.6;
+       margin: 0;
+     }
+     
+     .contact-card a {
+       color: #dc2626;
+       text-decoration: none;
+       font-weight: 600;
+       transition: color 0.3s ease;
+     }
+     
+     .contact-card a:hover {
+       color: #1f2937;
+     }
+     
+     /* Service Areas Styling */
+     .service-areas {
+       padding: 80px 0;
+       background: white;
+     }
+     
+     .section-title {
+       text-align: center;
+       margin-bottom: 60px;
+       animation: fadeInUp 0.8s ease;
+     }
+     
+     .section-title h2 {
+       font-size: 42px;
+       font-weight: 700;
+       color: #333;
+       margin-bottom: 15px;
+       position: relative;
+       display: inline-block;
+     }
+     
+     .section-title h2::after {
+       content: '';
+       position: absolute;
+       bottom: -10px;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 60px;
+       height: 4px;
+       background: linear-gradient(90deg, #dc2626 0%, #1f2937 100%);
+       border-radius: 2px;
+     }
+     
+     .section-title p {
+       font-size: 18px;
+       color: #666;
+       margin-top: 20px;
+     }
+     
+     .area-card {
+       background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+       border: 2px solid #e9ecef;
+       border-radius: 15px;
+       padding: 30px 20px;
+       margin: 20px 0;
+       text-align: center;
+       transition: all 0.3s ease;
+       position: relative;
+       overflow: hidden;
+       animation: fadeInUp 0.8s ease;
+     }
+     
+     .area-card:hover {
+       transform: translateY(-5px);
+       border-color: #dc2626;
+       box-shadow: 0 15px 30px rgba(220, 38, 38, 0.15);
+     }
+     
+     .area-card h3 {
+       font-size: 20px;
+       font-weight: 700;
+       color: #dc2626;
+       margin-bottom: 15px;
+     }
+     
+     .area-card p {
+       font-size: 16px;
+       color: #666;
+       line-height: 1.6;
+       margin: 0;
+     }
+     
+     /* Quick Contact CTA */
+     .quick-contact {
+       background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%);
+       padding: 60px 0;
+       text-align: center;
+       color: white;
+       position: relative;
+       overflow: hidden;
+     }
+     
+     .quick-contact::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="0,0 1000,100 1000,0"/></svg>');
+       background-size: 100% 100%;
+     }
+     
+     .quick-contact h2 {
+       font-size: 36px;
+       font-weight: 700;
+       margin-bottom: 30px;
+       animation: fadeInUp 0.8s ease;
+     }
+     
+     .contact-buttons {
+       display: flex;
+       justify-content: center;
+       gap: 20px;
+       flex-wrap: wrap;
+       animation: fadeInUp 0.8s ease 0.2s both;
+     }
+     
+     .contact-btn {
+       display: inline-flex;
+       align-items: center;
+       padding: 15px 30px;
+       background: rgba(255,255,255,0.2);
+       color: white;
+       text-decoration: none;
+       border-radius: 50px;
+       font-size: 18px;
+       font-weight: 600;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(10px);
+       border: 2px solid rgba(255,255,255,0.3);
+     }
+     
+     .contact-btn:hover {
+       background: white;
+       color: #dc2626;
+       transform: translateY(-3px);
+       box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+     }
+     
+     .contact-btn i {
+       margin-left: 10px;
+       font-size: 20px;
+     }
+     
+     /* Animations */
+     @keyframes fadeInUp {
+       from {
+         opacity: 0;
+         transform: translateY(30px);
+       }
+       to {
+         opacity: 1;
+         transform: translateY(0);
+       }
+     }
+     
+     /* Responsive Design */
+     @media (max-width: 768px) {
+       .contact-hero h1 {
+         font-size: 32px;
+       }
+       
+       .contact-card {
+         padding: 30px 20px;
+         margin: 15px 0;
+       }
+       
+       .contact-icon {
+         width: 60px;
+         height: 60px;
+         font-size: 24px;
+       }
+       
+       .section-title h2 {
+         font-size: 28px;
+       }
+       
+       .contact-buttons {
+         flex-direction: column;
+         align-items: center;
+       }
+       
+       .contact-btn {
+         width: 100%;
+         max-width: 280px;
+         justify-content: center;
+       }
+     }
+     
+     /* Banner text styling */
+     .banner_text {
+       color: #ffffff !important;
+     }
+     
+     .banner_taital {
+       font-family: 'Cairo', sans-serif !important;
+       font-weight: 700 !important;
+       line-height: 1.2 !important;
+     }
+   </style>
+</head>
+<body>
+   <div class="header_section">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="images/osos.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                  <li class="nav-item"><a class="nav-link" href="hosting.html">الأسئلة الشائعة</a></li>
+                  <li class="nav-item"><a class="nav-link" href="domain.html">مشاريعنا</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html">لماذا نحن</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+               </ul>
+            </div>
+         </nav>
+         <div class="custom_bg">
+            <div class="custom_menu">
+               <ul>
+                  <li><a href="index.html">الرئيسية</a></li>
+                  <li><a href="about.html">من نحن</a></li>
+                  <li><a href="hosting.html">الأسئلة الشائعة</a></li>
+                  
+                  <li><a href="domain.html">مشاريعنا</a></li>
+                  <li><a href="services.html">لماذا نحن</a></li>
+                  <li class="active"><a href="contact.html">تواصل معنا</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Page Header -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h1 class="banner_taital">تواصل معنا</h1>
+                  <p class="banner_text">نحن هنا لخدمتك والإجابة عن جميع استفساراتك الأمنية</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Contact Section -->
+   <div class="contact-info-section">
+      <div class="container">
+         <div class="section-title">
+            <h2>معلومات التواصل</h2>
+            <p>نحن هنا لخدمتك في أي وقت تحتاج إليه لأي استفسار أو طلب</p>
+         </div>
+         
+         <div class="row">
+            <div class="col-lg-4 col-md-6">
+               <div class="contact-card address-card">
+                  <div class="contact-icon">
+                     <i class="fa fa-map-marker"></i>
+                  </div>
+                  <h3>العنوان</h3>
+                  <p>مؤسسة أسس الرسالة الأمنية<br>الخبر - المنطقة الشرقية - السعودية</p>
+               </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+               <a href="https://wa.me/966544656094" class="contact-card" target="_blank">
+                  <div class="contact-icon">
+                     <i class="fa fa-phone"></i>
+                  </div>
+                  <h3>الهاتف / واتساب</h3>
+                  <p>966544656094+<br>متاح 24/7 للتواصل</p>
+               </a>
+            </div>
+            
+            <div class="col-lg-4 col-md-12">
+               <a href="mailto:osossystems1@gmail.com" class="contact-card">
+                  <div class="contact-icon">
+                     <i class="fa fa-envelope"></i>
+                  </div>
+                  <h3>البريد الإلكتروني</h3>
+                  <p>osossystems1@gmail.com<br>للاستفسارات والطلبات الرسمية</p>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Services Areas -->
+   <div class="service-areas">
+      <div class="container">
+         <div class="section-title">
+            <h2>مناطق خدماتنا</h2>
+            <p>نقدم خدماتنا المتميزة في جميع أنحاء المملكة العربية السعودية</p>
+         </div>
+         
+         <div class="row">
+            <div class="col-md-4">
+               <div class="area-card">
+                  <h3>الدمام</h3>
+                  <p>عاصمة المنطقة الشرقية - نقدم جميع خدماتنا التقنية والأمنية المتطورة بأعلى معايير الجودة</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="area-card">
+                  <h3>الخبر</h3>
+                  <p>المدينة التجارية المتطورة - نوفر حلول تقنية شاملة ومتكاملة لجميع القطاعات التجارية والصناعية</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="area-card">
+                  <h3>المنطقة الشرقية</h3>
+                  <p>نغطي جميع مدن المنطقة الشرقية بخدماتنا المتخصصة في الأمن والتكنولوجيا الحديثة</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Quick Contact -->
+   <div class="quick-contact">
+      <div class="container">
+         <h2>للتواصل السريع</h2>
+         <div class="contact-buttons">
+            <a href="tel:+966544656094" class="contact-btn">
+               <i class="fa fa-phone"></i>
+               اتصل الآن
+            </a>
+         </div>
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-4">
+               <h3 class="footer_text">روابط مفيدة</h3>
+               <div class="footer_menu">
+                  <ul>
+                     <li><a href="index.html">الرئيسية</a></li>
+                     <li><a href="about.html">من نحن</a></li>
+                     <li><a href="hosting.html">الأسئلة الشائعة</a></li>
+                     <li><a href="domain.html">مشاريعنا</a></li>
+                     
+                     <li class="active"><a href="contact.html">تواصل معنا</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <h3 class="footer_text">معلومات التواصل</h3>
+               <div class="location_text">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-map-marker"></i> مؤسسة أسس الرسالة الأمنية<br>الخبر - المنطقة الشرقية - السعودية</a></li>
+                     <li><a href="tel:+966544656094"><i class="fa fa-phone"></i> 966544656094+</a></li>
+                     <li><a href="mailto:osossystems1@gmail.com"><i class="fa fa-envelope"></i> osossystems1@gmail.com</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <h3 class="footer_text">تابعنا</h3>
+               <p class="dummy_text">تابعنا عبر وسائل التواصل الاجتماعي</p>
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Copyright -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">2025 جميع الحقوق محفوظة. مؤسسة أسس الرسالة الأمنية</p>
+      </div>
+   </div>
+
+   <!-- Scripts -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+</html>
