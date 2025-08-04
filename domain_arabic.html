@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>مشاريعنا - أسس الرسالة الأمنية</title>
+   <meta name="keywords" content="مشاريع، أعمالنا، أسس الرسالة الأمنية">
+   <meta name="description" content="مشاريعنا المنجزة في مجال الأنظمة الأمنية والشبكات">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- Arabic Support CSS -->
+   <style>
+     body {
+       font-family: 'Cairo', sans-serif !important;
+       direction: rtl;
+       text-align: right;
+     }
+     
+     /* Services section with animated background */
+     .services_section {
+       position: relative;
+       overflow: hidden;
+     }
+     
+     /* Animated background */
+     .services_section::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 200%;
+       height: 200%;
+       background: linear-gradient(45deg, 
+         rgba(220, 38, 38, 0.08) 0%,
+         rgba(0, 0, 0, 0.12) 25%,
+         rgba(185, 28, 28, 0.08) 50%,
+         rgba(20, 20, 20, 0.15) 75%,
+         rgba(153, 27, 27, 0.08) 100%);
+       animation: rotateGradient 15s linear infinite;
+       z-index: 0;
+     }
+     
+     .services_section::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-image: 
+         radial-gradient(circle at 15% 25%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+         radial-gradient(circle at 85% 75%, rgba(0, 0, 0, 0.2) 0%, transparent 50%),
+         radial-gradient(circle at 45% 45%, rgba(185, 28, 28, 0.15) 0%, transparent 50%);
+       background-size: 300px 300px, 400px 400px, 200px 200px;
+       animation: floatingShapes 10s ease-in-out infinite alternate;
+       z-index: 0;
+     }
+     
+     @keyframes rotateGradient {
+       0% { transform: rotate(0deg) scale(1); }
+       25% { transform: rotate(90deg) scale(1.1); }
+       50% { transform: rotate(180deg) scale(1); }
+       75% { transform: rotate(270deg) scale(1.1); }
+       100% { transform: rotate(360deg) scale(1); }
+     }
+     
+     @keyframes floatingShapes {
+       0% { 
+         transform: translate(0, 0) rotate(0deg);
+         opacity: 0.4;
+       }
+       25% { 
+         transform: translate(20px, -25px) rotate(90deg);
+         opacity: 0.6;
+       }
+       50% { 
+         transform: translate(-15px, -20px) rotate(180deg);
+         opacity: 0.5;
+       }
+       75% { 
+         transform: translate(25px, 15px) rotate(270deg);
+         opacity: 0.7;
+       }
+       100% { 
+         transform: translate(0, 0) rotate(360deg);
+         opacity: 0.4;
+       }
+     }
+     
+     .services_section .container {
+       position: relative;
+       z-index: 1;
+     }
+     
+     /* Enhanced service boxes with hover animations */
+     .service_box {
+       background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+       border: 2px solid #e9ecef;
+       border-radius: 15px;
+       padding: 30px 25px;
+       margin: 20px 0;
+       min-height: 280px;
+       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+       position: relative;
+       overflow: hidden;
+       transform-origin: center;
+     }
+     
+     /* Elegant hover effects */
+     .service_box:hover {
+       transform: translateY(-15px) scale(1.05) rotateY(2deg);
+       box-shadow: 0 20px 50px rgba(220, 38, 38, 0.2);
+       border-color: rgba(220, 38, 38, 0.8);
+       animation: gentleFloat 2s ease-in-out infinite;
+     }
+     
+     /* Floating animation for hovered boxes */
+     @keyframes gentleFloat {
+       0%, 100% { 
+         transform: translateY(-15px) scale(1.05) rotateY(2deg);
+       }
+       50% { 
+         transform: translateY(-20px) scale(1.05) rotateY(-1deg);
+       }
+     }
+     
+     /* Ripple effect on hover */
+     .service_box::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 0;
+       height: 0;
+       background: radial-gradient(circle, rgba(220, 38, 38, 0.2) 0%, transparent 70%);
+       border-radius: 50%;
+       transform: translate(-50%, -50%);
+       transition: all 1s ease-out;
+       pointer-events: none;
+       z-index: 1;
+       opacity: 0;
+     }
+     
+     .service_box:hover::after {
+       width: 200px;
+       height: 200px;
+       opacity: 1;
+       animation: gentleRipple 2s ease-out infinite;
+     }
+     
+     @keyframes gentleRipple {
+       0% { 
+         width: 80px; 
+         height: 80px; 
+         opacity: 0.4; 
+       }
+       50% { 
+         width: 150px; 
+         height: 150px; 
+         opacity: 0.2; 
+       }
+       100% { 
+         width: 220px; 
+         height: 220px; 
+         opacity: 0; 
+       }
+     }
+     
+     /* Enhanced text animations on hover */
+     .service_box:hover .wordpress_text {
+       animation: textGlow 1.5s ease-in-out infinite;
+       color: #dc2626 !important;
+       text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+     }
+     
+     .service_box:hover .opposed_text {
+       animation: textShimmer 2s ease-in-out infinite;
+       color: #333 !important;
+     }
+     
+     .service_box:hover .services_icon img {
+       animation: iconSpin 1s ease-in-out infinite;
+       filter: brightness(1.2) saturate(1.3);
+     }
+     
+     @keyframes textGlow {
+       0%, 100% { 
+         text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+         transform: scale(1);
+       }
+       50% { 
+         text-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+         transform: scale(1.02);
+       }
+     }
+     
+     @keyframes textShimmer {
+       0%, 100% { opacity: 1; }
+       50% { opacity: 0.8; }
+     }
+     
+     @keyframes iconSpin {
+       0%, 100% { transform: scale(1) rotate(0deg); }
+       50% { transform: scale(1.1) rotate(5deg); }
+     }
+     
+     /* Ensure content appears above animations */
+     .service_box .wordpress_text,
+     .service_box .opposed_text,
+     .service_box .services_icon {
+       position: relative;
+       z-index: 2;
+     }
+   </style>
+</head>
+<body>
+   <div class="header_section">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                  <li class="nav-item"><a class="nav-link" href="hosting.html">الأسئلة الشائعة</a></li>
+                  <li class="nav-item"><a class="nav-link" href="testimonial.html">آراء العملاء</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="domain.html">مشاريعنا</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html">لماذا نحن</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      
+      <!-- Page Header -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h1 class="banner_taital">مشاريعنا المنجزة</h1>
+                  <p class="banner_text">نفخر بإنجازاتنا ومشاريعنا المتميزة في مجال الأنظمة الأمنية</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Projects Section -->
+   <div class="services_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="services_taital">مشاريع مميزة</h1>
+               <p class="services_text">مجموعة من مشاريعنا الناجحة في مختلف القطاعات</p>
+            </div>
+         </div>
+         
+         <div class="row">
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-1.png">
+                  </div>
+                  <h3 class="wordpress_text">🏢 المجمعات التجارية</h3>
+                  <p class="opposed_text">تركيب أنظمة مراقبة شاملة وأنظمة تحكم في الدخول لأكثر من 15 مجمع تجاري في المنطقة الشرقية</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-2.png">
+                  </div>
+                  <h3 class="wordpress_text">🏥 المستشفيات والعيادات</h3>
+                  <p class="opposed_text">تنفيذ أنظمة أمنية متطورة وأنظمة حضور وانصراف لأكثر من 20 منشأة طبية</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-3.png">
+                  </div>
+                  <h3 class="wordpress_text">🏫 المدارس والجامعات</h3>
+                  <p class="opposed_text">تركيب أنظمة صوت وأنظمة مراقبة وشبكات متكاملة لأكثر من 30 مؤسسة تعليمية</p>
+               </div>
+            </div>
+         </div>
+         
+         <div class="row">
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-4.png">
+                  </div>
+                  <h3 class="wordpress_text">🕌 المساجد</h3>
+                  <p class="opposed_text">تركيب أنظمة صوت عالية الجودة وأنظمة إنذار لأكثر من 50 مسجد في المنطقة</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-5.png">
+                  </div>
+                  <h3 class="wordpress_text">🏭 المصانع والمؤسسات</h3>
+                  <p class="opposed_text">تنفيذ أنظمة أمنية شاملة وشبكات متطورة لأكثر من 25 مصنع ومؤسسة صناعية</p>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="service_box">
+                  <div class="services_icon">
+                     <img src="images/icon-6.png">
+                  </div>
+                  <h3 class="wordpress_text">🏘️ المجمعات السكنية</h3>
+                  <p class="opposed_text">تركيب أنظمة مراقبة وتحكم في الدخول لأكثر من 40 مجمع سكني وفيلا</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Statistics Section -->
+   <div class="pricing_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="pricing_taital">إنجازاتنا بالأرقام</h1>
+               <p class="pricing_text">أرقام تتحدث عن خبرتنا وثقة عملائنا</p>
+            </div>
+         </div>
+         <div class="pricing_section_2">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <h3 class="number_text">📊</h3>
+                     <h5 class="cloud_text">مشاريع منجزة</h5>
+                     <h1 class="dolor_text">200+</h1>
+                     <h3 class="monthly_text">مشروع ناجح</h3>
+                     <p class="band_text">في جميع أنحاء المنطقة الشرقية</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <h3 class="number_text">😊</h3>
+                     <h5 class="cloud_text">عملاء راضون</h5>
+                     <h1 class="dolor_text">150+</h1>
+                     <h3 class="monthly_text">عميل سعيد</h3>
+                     <p class="band_text">من الأفراد والمؤسسات</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <h3 class="number_text">⏰</h3>
+                     <h5 class="cloud_text">سنوات خبرة</h5>
+                     <h1 class="dolor_text">7+</h1>
+                     <h3 class="monthly_text">سنوات متواصلة</h3>
+                     <p class="band_text">في مجال الأنظمة الأمنية</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <h3 class="number_text">🔧</h3>
+                     <h5 class="cloud_text">دعم فني</h5>
+                     <h1 class="dolor_text">24/7</h1>
+                     <h3 class="monthly_text">خدمة مستمرة</h3>
+                     <p class="band_text">دعم ومتابعة على مدار الساعة</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Call to Action -->
+   <div class="newslatter_section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="newslatter_taital">هل لديك مشروع جديد؟</h1>
+               <p style="color: white; font-size: 16px; margin-bottom: 20px;">نحن مستعدون لتنفيذ مشروعك بأعلى معايير الجودة</p>
+               <div class="text-center">
+                  <a href="tel:+966544656094" class="btn" style="background: #dc2626; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px;">
+                     📞 احصل على عرض سعر مجاني
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-4">
+               <h3 class="footer_text">روابط مفيدة</h3>
+               <div class="footer_menu">
+                  <ul>
+                     <li><a href="index.html">الرئيسية</a></li>
+                     <li><a href="about.html">من نحن</a></li>
+                     <li><a href="hosting.html">الأسئلة الشائعة</a></li>
+                     <li class="active"><a href="domain.html">مشاريعنا</a></li>
+                     <li><a href="testimonial.html">آراء العملاء</a></li>
+                     <li><a href="contact.html">تواصل معنا</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <h3 class="footer_text">معلومات التواصل</h3>
+               <div class="location_text">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-map-marker"></i> مؤسسة أسس الرسالة الأمنية<br>الخبر - المنطقة الشرقية - السعودية</a></li>
+                     <li><a href="tel:+966544656094"><i class="fa fa-phone"></i> 966544656094+</a></li>
+                     <li><a href="mailto:osossystems1@gmail.com"><i class="fa fa-envelope"></i> osossystems1@gmail.com</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <h3 class="footer_text">تابعنا</h3>
+               <p class="dummy_text">للحصول على آخر الأخبار والعروض</p>
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Copyright -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">2025 جميع الحقوق محفوظة. مؤسسة أسس الرسالة الأمنية</p>
+      </div>
+   </div>
+
+   <!-- Scripts -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+</html>
