@@ -29,8 +29,8 @@ type_a_replacement = '''<div class="social-links">
                            <i class="fab fa-youtube"></i>
                            <span>YouTube</span>
                         </a>
-                        <a href="#" class="social-link">
-                           <i class="fab fa-telegram-plane"></i>
+                        <a href="https://t.me/osossytems" class="social-link">
+                <i class="fab fa-telegram-plane"></i>
                            <span>Telegram</span>
                         </a>
                      </div>'''
@@ -45,7 +45,7 @@ type_b_replacement = '''<div class="social_icon">
                       <li><a href="#"><i class="fa fa-snapchat-ghost"></i></a></li>
                       <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                       <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                      <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                      <li><a href="https://t.me/osossytems"><i class="fa fa-telegram"></i></a></li>
                    </ul>
                 </div>'''
 
